@@ -132,46 +132,46 @@ public class JavaScaffoldGUI {
 	}
 
 	private void cadastrarTemplate(JPanel panel) {
-		JLayeredPane dadosTemplate = new JLayeredPane();
+		JPanel dadosTemplate = new JPanel();
 		panel.add(dadosTemplate, BorderLayout.CENTER);
-		dadosTemplate.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-
-		JPanel basePkgPanel = new JPanel();
-		dadosTemplate.add(basePkgPanel);
-
-		JLabel basePkg = new JLabel("Base Package");
-		basePkgPanel.add(basePkg);
-
-		basePkgTextField = new JTextField();
-		basePkgPanel.add(basePkgTextField);
-		basePkgTextField.setHorizontalAlignment(SwingConstants.LEFT);
-		basePkgTextField.setColumns(28);
-
-		JButton selecionaTemplateButton = new JButton("Selecione");
-		basePkgPanel.add(selecionaTemplateButton);
-
-		JPanel templateEditorPanel = new JPanel();
-		dadosTemplate.add(templateEditorPanel);
-
-		TextArea templateCode = new TextArea();
-		templateEditorPanel.add(templateCode);
-
-		JPanel variableDefinitionPanel = new JPanel();
-		dadosTemplate.add(variableDefinitionPanel);
-
-		JLabel variavelLabel = new JLabel("Variável");
-		variableDefinitionPanel.add(variavelLabel);
-
-		variavelTextField = new JTextField();
-		variavelTextField.setHorizontalAlignment(SwingConstants.LEFT);
-		variavelTextField.setColumns(40);
-		variableDefinitionPanel.add(variavelTextField);
-
-		JPanel newVariablePanel = new JPanel();
-		dadosTemplate.add(newVariablePanel);
-
-		JButton novaVariavelButton = new JButton("Nova Variável");
-		newVariablePanel.add(novaVariavelButton);
+				dadosTemplate.setLayout(new BoxLayout(dadosTemplate, BoxLayout.Y_AXIS));
+		
+				JPanel basePkgPanel = new JPanel();
+				dadosTemplate.add(basePkgPanel);
+				
+						JLabel basePkg = new JLabel("Base Package");
+						basePkgPanel.add(basePkg);
+						
+								basePkgTextField = new JTextField();
+								basePkgPanel.add(basePkgTextField);
+								basePkgTextField.setHorizontalAlignment(SwingConstants.LEFT);
+								basePkgTextField.setColumns(28);
+								
+										JButton selecionaTemplateButton = new JButton("Selecione");
+										basePkgPanel.add(selecionaTemplateButton);
+		
+				JPanel templateEditorPanel = new JPanel();
+				dadosTemplate.add(templateEditorPanel);
+				
+						TextArea templateCode = new TextArea();
+						templateEditorPanel.add(templateCode);
+		
+				JPanel variableDefinitionPanel = new JPanel();
+				dadosTemplate.add(variableDefinitionPanel);
+				
+						JLabel variavelLabel = new JLabel("Variável");
+						variableDefinitionPanel.add(variavelLabel);
+						
+								variavelTextField = new JTextField();
+								variavelTextField.setHorizontalAlignment(SwingConstants.LEFT);
+								variavelTextField.setColumns(40);
+								variableDefinitionPanel.add(variavelTextField);
+		
+				JPanel newVariablePanel = new JPanel();
+				dadosTemplate.add(newVariablePanel);
+				
+						JButton novaVariavelButton = new JButton("Nova Variável");
+						newVariablePanel.add(novaVariavelButton);
 	}
 
 	private void criaListaTemplates(JPanel panel) {
