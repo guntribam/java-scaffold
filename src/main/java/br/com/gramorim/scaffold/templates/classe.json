@@ -1,0 +1,5 @@
+{
+  "basePkg": "br.com.gramorim",
+  "code": "public class ##nome##{}",
+  "var1": "nome"
+}
